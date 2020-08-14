@@ -1,5 +1,5 @@
 {
-    "name": "json-bump",
+    "name": "json-bumper",
     "version": "0.1.3",
     "description": "bumps the \"version\" entry for a JSON file",
     "main": "version.js",
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/davidfig/json-bump.git"
+        "url": "git+https://github.com/kaangokdemir/json-bump.git"
     },
     "keywords": [
         "bump",
@@ -19,9 +19,9 @@
     "author": "David S. Figatner",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/davidfig/json-bump/issues"
+        "url": "https://github.com/kaangokdemir/json-bump/issues"
     },
-    "homepage": "https://github.com/davidfig/json-bump#readme",
+    "homepage": "https://github.com/kaangokdemir/json-bump#readme",
     "bin": {
         "json-bump": "index.js"
     },
