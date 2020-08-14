@@ -31,10 +31,15 @@ module.exports = function version(filename, options) {
   }
   options.entry = options.entry || 'version'
   const current = json[options.entry]
+
   let updated, split
   if (options.replace) {
     json[options.entry] = options.entry
     updated = options.entry
+  } else if (options.pre) {
+    json[options.entry] = options.pre
+    updated = current + '-' + options.pre
+    options.replace = updated
   } else {
     split = current.split('.')
     if (split.length !== 3) {
@@ -67,6 +72,7 @@ module.exports = function version(filename, options) {
   }
 
   updated = json[options.entry]
+
   jsonfile.writeFileSync(filename, json, { spaces: options.spaces })
   return { original: current, updated }
 }
